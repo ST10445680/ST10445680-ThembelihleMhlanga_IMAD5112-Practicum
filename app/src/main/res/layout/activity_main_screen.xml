@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txtDisplayDays"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <Button
+        android:id="@+id/btnDetailedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detailed view"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <Button
+        android:id="@+id/btnExitApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit app"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="163dp"
+        android:layout_height="87dp"
+        app:srcCompat="@drawable/hot_pink_weather_app_icon"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <TableRow
+        android:layout_width="409dp"
+        android:layout_height="71dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="151dp">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtDayOfTheWeek"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:text="Day" />
+
+        <TextView
+            android:id="@+id/txtMinTemp"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:text="Minimum temp." />
+
+        <TextView
+            android:id="@+id/txtMaxTemp."
+            android:layout_width="109dp"
+            android:layout_height="match_parent"
+            android:text="Max Temp." />
+
+        <TextView
+            android:id="@+id/txtWeatherCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Weather Condition" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="411dp"
+        android:layout_height="56dp"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="222dp">
+
+        <ListView
+            android:id="@+id/itemDaysOfTheWeekList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="412dp"
+        android:layout_height="54dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="279dp">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/itemMinTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_column="0"
+                app:layout_row="0" />
+        </androidx.gridlayout.widget.GridLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="333dp">
+
+        <ListView
+            android:id="@+id/itemMaxTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="410dp"
+        android:layout_height="66dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="393dp">
+
+        <ListView
+            android:id="@+id/itemWeatherCondition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/txtDisplayAvgMinTemp."
+        android:layout_width="213dp"
+        android:layout_height="48dp"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="542dp" />
+
+    <TableLayout
+        android:layout_width="412dp"
+        android:layout_height="309dp"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="150dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtDisplayAvgMaxTemp"
+        android:layout_width="211dp"
+        android:layout_height="46dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="599dp" />
+
+    <TextView
+        android:id="@+id/txtInput"
+        android:layout_width="192dp"
+        android:layout_height="46dp"
+        android:text="Please input the name of the city you are looking for"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="11dp" />
+
+    <TextView
+        android:id="@+id/txtErrorMessage"
+        android:layout_width="212dp"
+        android:layout_height="57dp"
+        android:text="Results:"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="472dp" />
+
+    <TextView
+        android:id="@+id/txtUserInput"
+        android:layout_width="196dp"
+        android:layout_height="56dp"
+        android:text="Input:"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="77dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
